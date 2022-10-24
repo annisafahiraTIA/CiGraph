@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  .textarea1{
+    width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  border-radius: 20px;
+  background-color: #d1f3ff;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-weight: 300;
+  color: #2a2a2a;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  }
+  .button1{
+    display: inline-block;
+  background-color: #03a4ed;
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 12px 25px;
+  border-radius: 23px;
+  letter-spacing: 0.25px;
+  border: none;
+  outline: none;
+  transition: all .3s;
+  }
+</style>
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <title>CiGraph - Playfair</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <!-- <link rel="stylesheet" href="../assets/css/main.css"> -->
+    <link rel="stylesheet" href="../assets/css/templatemo-space-dynamic.css">
+    <link rel="stylesheet" href="../assets/css/animated.css">
+    <link rel="stylesheet" href="../assets/css/owl.css">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<!--
+    
+TemplateMo 562 Space Dynamic
+
+https://templatemo.com/tm-562-space-dynamic
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="../index.html" class="logo">
+              <h4>Ci<span>Graph</span></h4>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="caesar.html">Caesar</a></li>
+              <li class="scroll-to-section"><a href="vigenere.html">Vigenere</a></li>
+              <li class="scroll-to-section"><a href="playfair.html" class="active">Playfair</a></li>
+              <li class="scroll-to-section"><a href="transposisi.html">Persegi</a></li>
+              <li class="scroll-to-section"><a href="affine.html">Affine</a></li>
+              <li class="scroll-to-section"><a href="hill.html">Hill</a></li>
+              <li class="scroll-to-section"><a href="zigzag.html">Zigzag</a></li>
+              <li class="scroll-to-section"></li> 
+            </ul>          
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 center">
+          <div class="section-heading  wow slideInLeft">
+            <h2>Playfair Cipher</h2>
+            <p></p>
+          </div>
+        </div>
+        <!-- <form id="contact"> -->
+          <div class="row">
+            <div class="col-lg-12">
+              <fieldset class="wow slideInRight">
+                <textarea class="textarea1" name="input" rows="8" cols="80" id="inputMessage" placeholder="Input text"></textarea>
+                <span>
+                    
+                    <div class="col-lg-6">
+                      <input type="text" class="textarea1" id="enteredKey" placeholder=" Enter Key (urutan 25 huruf) ex : monarchybdefgiklpqstuvwxz">
+                    </div>
+                    <button class="cipherMethod button1" id="cipherButtonPoly" onclick="cipherButtonFunction()" >Cipher</button>
+                    <button class="decipherMethod button1" id="decipherButton" onclick="decipherButtonFunction()">Decipher</button>
+
+                    <br><br>
+                  </span>
+                <textarea class="textarea1" name="result" rows="8" cols="80" id="result" placeholder="Output text" readonly></textarea>
+              </fieldset>
+            </div>
+          </div>
+        <!-- </form> -->
+       
+      </div>
+    </div>
+  </div>
+
+  <div id="services" class="our-services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+          <div class="left-image">
+            <img src="../assets/images/playfair.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+          <div class="section-heading">
+            <h2>Playfair Cipher</h2>
+            <p>Playfair Cipher adalah salah satu teknik kriptografi. Dalam teknik ini pesan dienkripsi berdasarkan pasangan huruf, bukan huruf tunggal seperti sandi klasik lainnya. </p>
+          </div>
+          <p><strong>Kelebihan :</strong><br>
+            Proses enkripsi dan dekripsi data menggunakan kombinasi dua huruf sehingga kriptanalis yang menggunakan teknik analisis frekuensi sangat sulit untuk memecahakan sandi playfair.<br>
+            Tabel kunci hanya digunakan sekali karena terdapat kemungkinan tabel kunci tersebut telah dipecahkan oleh pihak yang tidak berkepentingan. <br>
+            <br>
+            <strong>Kekurangan :</strong><br>
+            Sandi Playfair dengan mudah dapat dipecahkan dengan menggunakan teknik frekuensi ditribusi ganda, yaitu dengan menghitung frekuensi kemunculan pasangan dua huruf sandi 
+            yang kemudian dibandingkan dengan frekuensi pasangan dua huruf pada suatu bahasa.<br>
+            SandiPlayfair tidak menggunakan huruf J dalam tabel kunci sehingga bisa menimbulkan makna atau arti ganda pada saat memecahkan atau menerjemahkan suatu sandi.<br>
+            SandiPlayfair tidak cocok digunakan untuk menyampaikan pesan rahasia yang cukup panjang.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Scripts -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/owl-carousel.js"></script>
+  <script src="../assets/js/animation.js"></script>
+  <script src="../assets/js/imagesloaded.js"></script>
+  <script src="../assets/js/templatemo-custom.js"></script>
+  
+  <script type="text/javascript" src="../assets/js/playfair.js"></script>
+  <script type="text/javascript" src="../assets/js/main.js"></script>
+  <script>
+    AOS.init({
+duration: 1200,
+})
+    </script>
+
+</body>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
+        <p>© Copyright 2022 by Kelompok 13. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+</html>
